@@ -1,0 +1,38 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "watch:tailwind": "postcss public/tailwind.css -o public/index.css -w",
+    "build:tailwind": "cross-env NODE_ENV=production postcss public/tailwind.css -o public/index.css",
+    "build": "yarn run build:tailwind && rollup -c",
+    "start": "sirv public --single",
+    "serve": "serve public -p 80",
+    "dev": "concurrently \"rollup -c -w\" \"yarn run watch:tailwind\""
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "autoprefixer": "^10.0.2",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "postcss-cli": "^8.2.0",
+    "postcss-nesting": "^7.0.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^4.5.2",
+    "tailwindcss": "^1.9.6"
+  },
+  "dependencies": {
+    "@beyonk/svelte-carousel": "^2.8.0",
+    "firebase": "^8.0.2",
+    "postcss": "^8.1.7",
+    "rxfire": "^4.0.0",
+    "rxjs": "^6.6.3",
+    "sirv-cli": "^1.0.0",
+    "svelte-routing": "^1.4.2",
+    "swiper": "^6.3.5"
+  }
+}
